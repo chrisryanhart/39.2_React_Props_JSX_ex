@@ -1,9 +1,17 @@
 const App = () => (
     <div>
-        <h1>Test</h1>
-        <firstComponent/>
+        <FirstComponent />
+        <NamedComponent name="Harrison"/>
     </div>
 )
 
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+
+// ReactDOM.render(<App/>, document.getElementById("root"));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
